@@ -54,3 +54,24 @@ button {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+#amortizationSchedule {
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px 40px;
+}
+
+#amortizationSchedule table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#amortizationSchedule th, #amortizationSchedule td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: right;
+}
+
+#amortizationSchedule th {
+    background-color: #f4f4f4;
+}
