@@ -16,6 +16,7 @@ function calculateLoan() {
     const totalInterest = (monthlyPayment * totalPayments) - loanAmount;
 
     displayResult(monthlyPayment, totalInterest);
+    generateAmortizationSchedule(loanAmount, monthlyInterest, monthlyPayment, totalPayments);
 }
 
 function displayResult(monthlyPayment, totalInterest) {
@@ -25,4 +26,28 @@ function displayResult(monthlyPayment, totalInterest) {
         <p><strong>Monthly Payment:</strong> ${monthlyPayment.toFixed(2)}</p>
         <p><strong>Total Interest:</strong> ${totalInterest.toFixed(2)}</p>
     `;
+}
+
+function generateAmortizationSchedule(loanAmount, monthlyInterest, monthlyPayment, totalPayments) {
+    const scheduleBody = document.getElementById('scheduleBody');
+    scheduleBody.innerHTML = ''; // Clear any existing rows
+
+    let balance = loanAmount;
+    
+    for (let i = 1; i <= totalPayments; i++) {
+        const interestPayment = balance * monthlyInterest;
+        const principalPayment = monthlyPayment - interestPayment;
+        balance -= principalPayment;
+
+        const row = `
+            <tr>
+                <td>${i}</td>
+                <td>${interestPayment.toFixed(2)}</td>
+                <td>${principalPayment.toFixed(2)}</td>
+                <td>${balance.toFixed(2)}</td>
+            </tr>
+        `;
+
+        scheduleBody.insertAdjacentHTML('beforeend', row);
+    }
 }
