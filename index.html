@@ -6,26 +6,39 @@
     <title>Loan Calculator</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 </head>
 <body>
     <div class="container">
         <div class="calculator">
             <h2>Loan Calculator</h2>
+
+            <!-- Input Groups -->
             <div class="input-group">
-                <label>Loan Amount:</label>
+                <label for="loanAmountInput">Loan Amount:</label>
                 <input type="number" id="loanAmountInput" placeholder="Enter Loan Amount">
             </div>
+
             <div class="input-group">
-                <label>Interest Rate (%)</label>
+                <label for="interestRateInput">Interest Rate (%)</label>
                 <input type="number" id="interestRateInput" placeholder="Enter Interest Rate">
             </div>
+
             <div class="input-group">
-                <label>Loan Term (In Months)</label>
+                <label for="loanTermInput">Loan Term (In Months)</label>
                 <input type="number" id="loanTermInput" placeholder="Enter Loan Term">
             </div>
+
+            <div class="input-group">
+                <label for="prepaymentInput">Monthly Prepayment:</label>
+                <input type="number" id="prepaymentInput" placeholder="Enter Prepayment Amount">
+            </div>
+
             <button id="calculateBtn">Calculate</button>
+
+            <!-- Result Section -->
             <div id="result">Final Result</div>
+
+            <!-- Amortization Schedule -->
             <div id="amortizationSchedule">
                 <h3>Amortization Schedule</h3>
                 <table>
@@ -37,19 +50,18 @@
                             <th>Balance</th>
                         </tr>
                     </thead>
-                    <tbody id="scheduleBody">
-                        <!-- Rows will be inserted here by JavaScript -->
-                    </tbody>
+                    <tbody id="scheduleBody"></tbody>
                 </table>
             </div>
+
+            <!-- Chart Section -->
             <div id="chartContainer">
                 <h3>Loan Payment Breakdown</h3>
                 <canvas id="paymentChart"></canvas>
             </div>
-            
         </div>
-         
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

@@ -17,7 +17,7 @@ h2 {
     background-color: #fff;
     border-radius: 8px;
     border: 1px solid #ccc;
-    padding: 10px 40px;
+    padding: 20px 40px;
 }
 
 .input-group {
@@ -54,6 +54,7 @@ button {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+
 #amortizationSchedule {
     margin-top: 30px;
     background-color: #fff;
@@ -75,9 +76,10 @@ button {
 #amortizationSchedule th {
     background-color: #f4f4f4;
 }
+
 #chartContainer {
     margin-top: 30px;
-    background-color: #fff;
+    background-color: #ece7e7;
     border-radius: 8px;
     padding: 10px 40px;
     text-align: center;
@@ -87,4 +89,3 @@ button {
     max-width: 100%;
     height: 400px;
 }
-
