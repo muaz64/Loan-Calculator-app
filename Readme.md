@@ -16,7 +16,7 @@ A responsive **Loan Calculator** web application that computes monthly loan paym
 
 ## 📸 Screenshot  
 
-![Loan Calculator App](./Screenshot_20-12-2024_21426_127.0.0.1.jpeg)
+![Loan Calculator App](./Loan%20Calculator%20app.jpeg)
 
 ---
 
